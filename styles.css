@@ -485,3 +485,11 @@ body,
 .history-btn{
   background-color: aqua;
 }
+
+.copy-btn {
+  background-color: aqua;
+}
+
+.share-btn {
+  background-color: green;
+}
