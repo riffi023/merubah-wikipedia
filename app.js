@@ -221,14 +221,6 @@ const getCurrentTheme = () => {
   return localStorage.getItem('theme') || 'light';
 };
 
-// Apply theme to document
-const applyTheme = (theme) => {
-  document.documentElement.setAttribute('data-theme', theme);
-  // Update toggle icon
-  toggleIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-  localStorage.setItem('theme', theme);
-};
-
 // Initialize theme
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = getCurrentTheme();
