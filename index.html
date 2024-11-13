@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!-- Background Video -->
+    <video autoplay loop muted id="bg-video">
+      <source src="background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
     <section class="wiki">
       <div class="container">
-        <div class="theme-toggle-container">
-          <button class="theme-toggle">
-            <span class="toggle-icon">🌙</span>
-          </button>
-        </div>
         <img src="./wiki-logo.png" alt="wikipedia logo" />
         <h3>Search Wikipedia</h3>
         <form class="form">
@@ -29,18 +30,19 @@
       </div>
       <div class="results"></div>
     </section>
-    <script src="./app.js"></script>
-    <!-- Google Translate Widget Script -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en', // Set default language of the page
-      includedLanguages: 'en,id,es,de,fr,zh-CN,zh-TW', // Include languages to display
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    <script src="./app.js"></script>
+
+    <!-- Google Translate Widget Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en', // Set default language of the page
+          includedLanguages: 'en,id,es,de,fr,zh-CN,zh-TW', // Include languages to display
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
