@@ -212,28 +212,6 @@ const fetchImage = async (title) => {
   }
 };
 
-// Theme Toggling Functionality
-const themeToggle = document.querySelector('.theme-toggle');
-const toggleIcon = document.querySelector('.toggle-icon');
-
-// Check for saved theme preference
-const getCurrentTheme = () => {
-  return localStorage.getItem('theme') || 'light';
-};
-
-// Initialize theme
-document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = getCurrentTheme();
-  applyTheme(savedTheme);
-});
-
-// Handle theme toggle click
-themeToggle.addEventListener('click', () => {
-  const currentTheme = getCurrentTheme();
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-  applyTheme(newTheme);
-});
-
 const toggleReadingMode = (articleCard) => {
   articleCard.classList.toggle('reading-mode');
   if (articleCard.classList.contains('reading-mode')) {
